@@ -1,10 +1,13 @@
 # Project Plan 
 Final Project for IS 477 by team jojo — "jo"celyn and jian "jo."
+-- wc ProjectPlan.md is the code to put into terminal for the word count : convenient way 
 
 ## Overview 
+**more details** 
 We will be aiming to answer our research question to the best of our ability according to our datasets using tools that we have been taught in class. 
 
 ## Research Question 
+**get more specific** 
 What are the most effective factors contributing to the students' performance in higher education (college) and secondary education (high school)? Is there a significant difference between the two groups or not? 
 
 ## Team 
@@ -19,6 +22,8 @@ This project requires two datasets from APIs: one for the higher education and t
 - secondary education: https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success 
 
 ## Timeline 
+**it has to look like the actual timeline with the weekly plan etc** 
+**make more detailed plans** 
 - Acquire datasets from at least two souces (Jian & Jocelyn)
 - Automatic (programmatic) integration of datasets using Python/Pandas and/or SQL (Jian)
 - Transparent data profiling, quality assessment, and cleaning (Jocelyn)
