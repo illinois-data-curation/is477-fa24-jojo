@@ -4,11 +4,11 @@ Final Project for IS 477 by team jojo — "jo"celyn and jian "jo."
 
 ## Overview 
 **more details** 
-We will be aiming to answer our research question to the best of our ability according to our datasets using tools that we have been taught in class. 
+We will be aiming to answer our research question to the best of our ability according to our datasets using tools that we have been taught in class. Specifically, we want to answer our question of which factors influence the most in terms of student performance in secondary and higher education, as well as the significant differences in academic success between the two groups. 
 
 ## Research Question 
 **get more specific** 
-What are the most effective factors contributing to the students' performance in higher education (college) and secondary education (high school)? Is there a significant difference between the two groups or not? 
+What are the most effective factors contributing to the students' performance in higher education (college) and secondary education (high school)? Is there a significant difference between the two groups or not in terms of academic success? 
 
 We want to look at the two datasets (one looking at student performance and the other looking at student dropout and academic success) and we want to see if these two datasets influence each other. We want to see if there are similar factors influencing both datasets and if maybe one factor in one dataset seems to be heavily correlated with another factor in the other dataset. We also want to take a look and see if there are any significant or huge difference between the two groups of highschool and college students and their success. It is interesting because highschool is a required education, but college is higher education for people who want to pursue a study/ come here by choice. This is bound to lead to some interesting differences between the two and their academic success.
 
