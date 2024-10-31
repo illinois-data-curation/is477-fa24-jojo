@@ -35,3 +35,62 @@ This project requires two datasets from APIs: one for the higher education and t
 - Accurate citation of data and software used (Jian)
 - Create metadata describing your package (Jocelyn)
 - Archive your project in a repository, obtaining a persistent identifier (Jian)
+
+- Week 1: Nov 1 - Nov 7
+Objective: Dataset Acquisition & Initial Setup
+
+Nov 1 - Nov 3:
+Acquire datasets from two sources (Jian & Jocelyn).
+Verify the format and structure of each dataset.
+Nov 4 - Nov 5:
+Determine compatibility requirements for integration, noting column structures, data types, and schema.
+Set up a shared project environment to facilitate collaborative work.
+Week 2: Nov 8 - Nov 14
+Objective: Data Integration and Initial Quality Checks
+
+Nov 8 - Nov 10:
+Programmatic dataset integration using Python/Pandas and/or SQL (Jian).
+Develop initial code for merging datasets and handling inconsistencies.
+Nov 11 - Nov 12:
+Create data profiling summaries (Jocelyn) to assess completeness, data ranges, and basic quality metrics.
+Make notes of any critical data quality issues requiring cleaning.
+Week 3: Nov 15 - Nov 21
+Objective: Data Cleaning, Profiling, and Quality Assurance
+
+Nov 15 - Nov 16:
+Perform comprehensive quality assessments (Jocelyn), documenting profiling outcomes in a transparent, reproducible format.
+Nov 17 - Nov 18:
+Apply data cleaning techniques as needed (e.g., handling nulls, removing duplicates, etc.).
+Nov 19 - Nov 21:
+Re-profile datasets post-cleaning to verify improvements.
+Week 4: Nov 22 - Nov 28
+Objective: Data Analysis and Visualization
+
+Nov 22 - Nov 23:
+Implement initial data analysis methods (Jian) to explore key insights.
+Identify essential visualizations for reporting data insights.
+Nov 24 - Nov 26:
+Begin creating visualizations, ensuring reproducibility and clarity.
+Finalize and save visualizations in project files for future access.
+Nov 27 - Nov 28:
+Review all analysis and visualizations, making any necessary adjustments.
+Week 5: Nov 29 - Dec 5
+Objective: Finalize Package, Documentation, and Automation
+
+Nov 29 - Dec 1:
+Create a reproducible package (Jocelyn), with clear instructions and dependencies.
+Develop an automated end-to-end workflow to ensure smooth execution (Jocelyn).
+Dec 2 - Dec 3:
+Document data and software sources, creating accurate citations (Jian).
+Dec 4 - Dec 5:
+Write metadata describing your package (Jocelyn), covering data sources, analysis methods, and functionality.
+Week 6: Dec 6 - Dec 10
+Objective: Project Archival and Final Submission
+
+Dec 6 - Dec 7:
+Test the workflow, verifying reproducibility and accuracy of outputs.
+Archive the project in a repository, obtaining a persistent identifier for citation (Jian).
+Dec 8 - Dec 9:
+Perform a final review of all project components, ensuring quality and completeness.
+Dec 10:
+Submit the project, including the repository link and project documentation.
