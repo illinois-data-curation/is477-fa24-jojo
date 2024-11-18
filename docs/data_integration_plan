@@ -1,0 +1,27 @@
+# Data Integration Plan
+
+## Objective
+To merge the `student_performance` and `student_dropout` datasets into a unified dataset for analysis, while addressing schema discrepancies.
+
+## Common Keys
+- `student_id`: Unique identifier for each student.
+- `gender`: A categorical variable available in both datasets.
+
+## Challenges and Resolutions
+1. **Data Type Mismatches**:
+   - Convert all `student_id` columns to string type to ensure compatibility.
+   
+2. **Naming Inconsistencies**:
+   - Standardize column names (e.g., `StudentID` vs `student_id`).
+
+3. **Missing Values**:
+   - Handle missing values during merging using an appropriate strategy (e.g., fill with "Unknown" or drop).
+
+4. **Integration Approach**:
+   - Perform an **inner join** on `student_id` to retain records present in both datasets.
+   - Additional columns from the `student_dropout` dataset will be appended to the corresponding rows in the `student_performance` dataset.
+
+## Output
+The integrated dataset will be stored in `data/integrated/student_data_combined.csv`.
+
+---
