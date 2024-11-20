@@ -17,3 +17,4 @@ df.drop_duplicates(inplace=True)
 df.to_csv("data/cleaned/student_dropout_cleaned.csv", index=False)
 
 print("Student dropout dataset cleaned successfully.")
+ 

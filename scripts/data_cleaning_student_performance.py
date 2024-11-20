@@ -17,3 +17,4 @@ df.drop_duplicates(inplace=True)
 df.to_csv("data/cleaned/student_performance_cleaned.csv", index=False)
 
 print("Student performance dataset cleaned successfully.")
+ 

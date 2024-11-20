@@ -24,3 +24,4 @@ def load_dataset(file_path):
 # Load the datasets for further processing
 student_performance_data = load_dataset(datasets["student_performance"])
 student_dropout_data = load_dataset(datasets["student_dropout"])
+ 

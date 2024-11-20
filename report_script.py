@@ -11,3 +11,4 @@ performance_profile.to_markdown("reports/data_profiling_student_performance.md")
 # Generate basic profile for the student dropout dataset
 dropout_profile = student_dropout.describe(include='all')
 dropout_profile.to_markdown("reports/data_profiling_student_dropout.md")
+ 
