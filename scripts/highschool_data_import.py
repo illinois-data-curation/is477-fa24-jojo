@@ -92,10 +92,10 @@ print(df_highschool.shape)
 print(df_highschool.info())
 
 # define base_directory to correctly locate new directory
-base_directory = 'final_project/is477-fa24-jojo'
+# base_directory = 'final_project/is477-fa24-jojo' 
 
 # Define the parent directory for data
-parent_directory = os.path.join(base_directory, 'data')
+parent_directory = os.path.join('data') # add base_directory inside the parenthesis if you have an error with repository
 if not os.path.exists(parent_directory):
     os.makedirs(parent_directory, exist_ok=True)
 # Define the new directory for cleaned data

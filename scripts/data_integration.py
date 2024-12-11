@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Paths to the datasets using relative paths 
-college_path = "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_college.csv"
-highschool_path = "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_highschool.csv"
+college_path = "data/cleaned_data/cleaned_college.csv"
+highschool_path = "data/cleaned_data/cleaned_highschool.csv"
 
 # check if the files are located in correct path
 for path in [college_path, highschool_path]:
@@ -20,10 +20,10 @@ print(students.head())
 print(students.shape)
 
 # define base_directory to correctly locate new directory
-base_directory = 'final_project/is477-fa24-jojo'
+# base_directory = 'final_project/is477-fa24-jojo'
 
 # Define the parent directory for data
-parent_directory = os.path.join(base_directory, 'data')
+parent_directory = os.path.join('data') # add base_directory inside the parenthesis if you have an error with repository
 if not os.path.exists(parent_directory):
     os.makedirs(parent_directory, exist_ok=True)
 # Define the new directory for cleaned data

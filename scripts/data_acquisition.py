@@ -3,9 +3,9 @@ import pandas as pd
 
 # Define file paths for datasets
 datasets = {
-    "college": "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_college.csv",
-    "highschool": "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_highschool.csv",
-    "students_integrated": "final_project/is477-fa24-jojo/data/integrated_data/students.csv"
+    "college": "data/cleaned_data/cleaned_college.csv",
+    "highschool": "data/cleaned_data/cleaned_highschool.csv",
+    "students_integrated": "data/integrated_data/students.csv"
 }
 
 # Ensure the datasets exist in the correct location
