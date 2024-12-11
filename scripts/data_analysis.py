@@ -1,39 +1,45 @@
-import os 
+import os
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# load the dataset 
-student_path = "final_project/is477-fa24-jojo/data/integrated_data/students.csv" # or data/~ after cd "is477-fa24-jojo"
+# Load the dataset
+student_path = "data/integrated_data/students.csv"  # relative path
 df = pd.read_csv(student_path)
 
-# print(df.groupby(['sex']).describe())
+# Calculate correlation matrix without two columns that have objects
+df2 = df.loc[:, ~df.columns.isin(['Pstatus', 'school'])]
+df2_fem = df2[df2['sex'] == 1]
+df2_mal = df2[df2['sex'] == 2]
 
-# # Define the parent directory for image/figures 
-# base_directory = 'final_project/is477-fa24-jojo'
-# parent_directory = os.path.join(base_directory, 'figures')
-# if not os.path.exists(parent_directory):
-#     os.makedirs(parent_directory, exist_ok=True)
+corr_matrix_fem = df2_fem.corr()
+corr_matrix_mal = df2_mal.corr()
 
-# file_name = 'association_sex&final_grade.png'
-# file_path = os.path.join(parent_directory, file_name)
+# Define the parent directory for image/figures
+#base_directory = 'is477-fa24-jojo' 
+parent_directory = os.path.join('figures')
+os.makedirs(parent_directory, exist_ok=True)  # Create the directory if it doesn't exist
 
-# # Save the cleaned DataFrame to the new directory
-# plt.savefig(file_path, index=False)
+file_name1 = 'heatmap_female.png'
+file_name2 = 'heatmap_male.png'
+file_path1 = os.path.join(parent_directory, file_name1)
+file_path2 = os.path.join(parent_directory, file_name2)
 
-# print(f"association figure is saved to {file_path}")
-print(df.dtypes)
-# df_fem = df[df['sex'] == 1]
-# df_mal = df[df['sex'] == 2]
+# Create heatmap for females
+fig_1 = plt.figure(figsize=(12, 10))
+ax_1 = sns.heatmap(corr_matrix_fem, annot=True, cmap='coolwarm', vmin=-1, vmax=1, center=0)
+ax_1.set_title('Correlation Heatmap of Variables (female)')
+fig_1.savefig(file_path1)  # Save the figure
 
+# Create heatmap for males
+fig_2 = plt.figure(figsize=(12, 10))
+ax_2 = sns.heatmap(corr_matrix_mal, annot=True, cmap='crest', vmin=-1, vmax=1, center=0)
+ax_2.set_title('Correlation Heatmap of Variables (male)')
+fig_2.savefig(file_path2)  # Save the figure
 
-# Calculate correlation matrix without two columns that have objects 
-# df2 = df.loc[:, ~df.columns.isin(['Pstatus', 'school'])]
-# corr_matrix = df2.corr()
+# Display the heatmaps
+plt.show()
 
-# # Create heatmap
-# plt.figure(figsize=(12, 10))
-# sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, center=0)
-# plt.title('Correlation Heatmap of Variables')
-# plt.show()
+print(f"Association figure is saved to {file_path1}")
+print(f"Association figure is saved to {file_path2}")

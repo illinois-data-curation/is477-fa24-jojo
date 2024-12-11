@@ -99,8 +99,9 @@ explain the heatmap result
 4. Consider implementing machine learning models to predict student performance based on the available features.
 
 ## Data Visualization
->![](path/to/image.png)
+>![correlation_heatmap_female](figures/heatmap_female.png)
 
+>![correlation_heatmap_male](figures/heatmap_male.png)
 insert visualization image by the call out code and interpret the visualization a little bit. 
 
 ## Reproducing 
