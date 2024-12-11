@@ -1,53 +1,41 @@
 import pandas as pd
 import os
 
-# Paths to the datasets
-student_performance_path = "data/raw/student_performance.csv"
-student_dropout_path = "data/raw/student_dropout.csv"
-output_dir = "data/integrated"
-output_path = os.path.join(output_dir, "student_data_combined.csv")
+# Paths to the datasets using relative paths 
+college_path = "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_college.csv"
+highschool_path = "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_highschool.csv"
 
-# Create output directory if it doesn't exist
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+# check if the files are located in correct path
+for path in [college_path, highschool_path]:
+    if not os.path.exists(path):
+        print(f"Error: File not found: {path}")
 
-# Load datasets with correct delimiter
-print("Loading datasets...")
-student_performance = pd.read_csv(student_performance_path, sep=";")
-student_dropout = pd.read_csv(student_dropout_path, sep=";")
+# load datasets 
+df_college = pd.read_csv(college_path)
+df_highschool = pd.read_csv(highschool_path)
 
-# Display column names for verification
-print("Columns in student_performance:", student_performance.columns)
-print("Columns in student_dropout:", student_dropout.columns)
+# combine two datasets 
+students = pd.concat([df_college, df_highschool])
+print(students.head())
+print(students.shape)
 
-# Rename columns to unify keys
-# Adjust these mappings based on actual column names in the datasets
-student_performance.rename(columns={"school": "student_id", "sex": "gender"}, inplace=True)
-student_dropout.rename(columns={"Gender": "gender"}, inplace=True)
+# define base_directory to correctly locate new directory
+base_directory = 'final_project/is477-fa24-jojo'
 
-# Create a unique identifier if "student_id" does not exist
-if "student_id" not in student_performance.columns:
-    print("'student_id' not found in student_performance; creating unique IDs...")
-    student_performance["student_id"] = student_performance.index.astype(str)
+# Define the parent directory for data
+parent_directory = os.path.join(base_directory, 'data')
+if not os.path.exists(parent_directory):
+    os.makedirs(parent_directory, exist_ok=True)
+# Define the new directory for cleaned data
+new_directory = os.path.join(parent_directory, 'integrated_data')
+file_name = 'students.csv'
+file_path = os.path.join(new_directory, file_name)
 
-if "student_id" not in student_dropout.columns:
-    print("'student_id' not found in student_dropout; creating unique IDs...")
-    student_dropout["student_id"] = student_dropout.index.astype(str)
+# Create the directory structure if it doesn't exist
+os.makedirs(new_directory, exist_ok=True)
 
-# Ensure that the "gender" columns in both datasets have the same data type
-student_performance["gender"] = student_performance["gender"].astype(str)
-student_dropout["gender"] = student_dropout["gender"].astype(str)
+# Save the cleaned DataFrame to the new directory
+students.to_csv(file_path, index=False)
 
-# Merge datasets on common keys (adjust keys as needed)
-print("Merging datasets...")
-merged_data = pd.merge(
-    student_performance, student_dropout, 
-    on=["student_id", "gender"], 
-    how="inner"  # Choose join type: inner, left, right, outer
-)
+print(f"Cleaned DataFrame saved to {file_path}")
 
-# Save the merged data to a CSV file
-print("Saving merged dataset...")
-merged_data.to_csv(output_path, index=False)
-print(f"Merged data saved to {output_path}")
- 

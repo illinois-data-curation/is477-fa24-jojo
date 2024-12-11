@@ -3,8 +3,9 @@ import pandas as pd
 
 # Define file paths for datasets
 datasets = {
-    "student_performance": "data/raw/student_performance.csv",
-    "student_dropout": "data/raw/student_dropout.csv"
+    "college": "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_college.csv",
+    "highschool": "final_project/is477-fa24-jojo/data/cleaned_data/cleaned_highschool.csv",
+    "students_integrated": "final_project/is477-fa24-jojo/data/integrated_data/students.csv"
 }
 
 # Ensure the datasets exist in the correct location
@@ -18,10 +19,13 @@ for name, file_path in datasets.items():
 def load_dataset(file_path):
     print(f"Loading dataset: {file_path}")
     data = pd.read_csv(file_path)
-    print(data.head())
+    print(data.shape)
     return data
 
 # Load the datasets for further processing
-student_performance_data = load_dataset(datasets["student_performance"])
-student_dropout_data = load_dataset(datasets["student_dropout"])
- 
+college = load_dataset(datasets["college"])
+highschool = load_dataset(datasets["highschool"])
+students_integrated = load_dataset(datasets["students_integrated"])
+
+# this data acquisition dataset shows that we have integrated two datasets correctly and they're all located in correct directories
+# rows from shape 145 (college) + 649(highschool) = 794 (students)
