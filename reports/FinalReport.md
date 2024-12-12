@@ -2,7 +2,7 @@
 - Link to archival record: Link to the archived copy of your project, including persistent identifier.
 - Contributors: Bulleted list of contributors (with optional ORCIDs)
     - Jian Jo: [ORCID link](#https://orcid.org/0009-0007-2534-7499)
-    - Jocelyn Yang: [ORCID link](#)
+    - Jocelyn Yang: [ORCID link](#https://orcid.org/0009-0003-1848-0794)
 
 This student academic performance analysis project investigates gender-specific predictors of academic success by analyzing educational datasets from both high school and college students. The research aims to understand how various factors such as study time, parental educations, and extracurricular activities differently affect academic outcomes based on gender. This research seeks to discover relationships among the features from datasets to better understand the complex dynamics of academic achievement.
 
