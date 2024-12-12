@@ -1,6 +1,7 @@
 # Student Academic Performance Analysis 
 - Link to archival record: [CodeOcean](https://codeocean.com/capsule/0621519/tree)
-- Contributors: Bulleted list of contributors (with optional ORCIDs)
+- Persistent identifier: 10.24433/CO.0621519.v1 (DOI according to CodeOcean before publishing)
+- Contributors: 
     - Jian Jo: [ORCID link](https://orcid.org/0009-0007-2534-7499)
     - Jocelyn Yang: [ORCID link](https://orcid.org/0009-0003-1848-0794)
 
@@ -108,7 +109,7 @@ This script performs initial exploratory data analysis on the integrated dataset
 
 ## Data Visualization
 ### Correlation Heatmap for Female
-![correlation_heatmap_female](../figures/heatmap_female.png)
+![correlation_heatmap_female](figures/heatmap_female.png)
 The correlation heatmap for female students reveals several notable patterns:
 - Strong Positive Correlations:
     - Mother's education (Medu) and father's education (Fedu) show the strongest positive correlation (0.64), indicating that female students' parents tend to have similar education levels
@@ -120,7 +121,7 @@ The correlation heatmap for female students reveals several notable patterns:
     - Age has negligible correlations with most variables except final grades
 
 ### Correlation Heatmap for Male
-![correlation_heatmap_male](../figures/heatmap_male.png)
+![correlation_heatmap_male](figures/heatmap_male.png)
 The correlations for the heatmap of male students are demonstrated quite differently.
 - Strong Positive Correlations:
     - Mother's and father's education levels show a moderately strong correlation (0.53)
@@ -200,3 +201,9 @@ This command will execute the workflow in the following order:
 
 ### Results
 After all the steps above, you should be left with the integrated dataset and the two main visualizations. 
+
+## References
+- [highschool student dataset](https://archive.ics.uci.edu/dataset/320/student+performance): Cortez, Paulo. "Student Performance." UCI Machine Learning Repository, 2008, https://doi.org/10.24432/C5TG7T.
+- [college student dataset](https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation): Yilmaz, Nevriye and Boran Şekeroğlu. "Higher Education Students Performance Evaluation." UCI Machine Learning Repository, 2019, https://doi.org/10.24432/C51G82.
+- “Markdown Editing with Visual Studio Code.” Code.visualstudio.com, 11 Dec. 2024, code.visualstudio.com/Docs/languages/markdown
+- Clyburne-Sherin, A., Fei, X., & Green, S. A. (2019). Computational Reproducibility via Containers in Psychology. Meta-psychology, 3.
