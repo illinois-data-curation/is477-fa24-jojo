@@ -1,6 +1,6 @@
 # Student Academic Performance Analysis 
 - Link to archival record: [CodeOcean](https://codeocean.com/capsule/0621519/tree)
-      - Persistent identifier: 10.24433/CO.0621519.v1 (DOI according to CodeOcean before publishing)
+- Persistent identifier: 10.24433/CO.0621519.v1 (DOI according to CodeOcean before publishing)
 - Contributors: Bulleted list of contributors (with optional ORCIDs)
     - Jian Jo: [ORCID link](https://orcid.org/0009-0007-2534-7499)
     - Jocelyn Yang: [ORCID link](https://orcid.org/0009-0003-1848-0794)
