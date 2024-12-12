@@ -201,3 +201,8 @@ This command will execute the workflow in the following order:
 
 ### Results
 After all the steps above, you should be left with the integrated dataset and the two main visualizations. 
+
+## Reproduction Steps
+- [highschool student dataset](https://archive.ics.uci.edu/dataset/320/student+performance): Cortez, Paulo. "Student Performance." UCI Machine Learning Repository, 2008, https://doi.org/10.24432/C5TG7T.
+- [college student dataset](https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+evaluation): Yilmaz, Nevriye and Boran Şekeroğlu. "Higher Education Students Performance Evaluation." UCI Machine Learning Repository, 2019, https://doi.org/10.24432/C51G82.
+
